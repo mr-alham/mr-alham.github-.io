@@ -83,6 +83,61 @@
             padding: 20px 0;
             background-color: #2d2d2d;
         }
+    /* General Section Styling */
+    .section {
+        margin-bottom: 50px;
+        padding: 20px;
+    }
+
+    /* Skills Category Headers */
+    h2, h3 {
+        color: #00ff00; /* Gives a Linux/terminal look */
+    }
+
+    h3 {
+        margin-top: 20px;
+    }
+
+    /* Skill List Styling */
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    ul li {
+        background-color: #2d2d2d;
+        padding: 10px;
+        margin-bottom: 5px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    ul li:hover {
+        background-color: #1e1e1e;
+    }
+
+    /* Skills Container Layout */
+    .skills-category {
+        margin-bottom: 30px;
+    }
+
+    .skills-category ul li::before {
+        content: "➤ ";
+        color: #00ff00; /* Terminal-like bullet points */
+    }
+
+    /* Responsive Layout */
+    @media (min-width: 768px) {
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .skills-category {
+            width: 45%; /* Display skills categories side by side */
+        }
+    }
     </style>
 </head>
 <body>
@@ -94,8 +149,8 @@
             <p>Cybersecurity Engineer | Linux Enthusiast | Cloud & Network Aficionado</p>
             <p>"Just another /bin/bash human trying to secure the world, one packet at a time."</p>
             <p>
-                <a href="mailto:your.email@example.com">Email</a> | 
-                <a href="https://www.linkedin.com/in/yourprofile">LinkedIn</a> | 
+                <a href="mailto:your.email@example.com">Email</a> |
+                <a href="https://www.linkedin.com/in/yourprofile">LinkedIn</a> |
                 <a href="https://github.com/yourgithub">GitHub</a>
             </p>
         </header>
@@ -103,7 +158,45 @@
         <!-- Skills Section -->
         <section class="section skills">
             <h2>Skills</h2>
-            <div class="skills-item">
+<section class="section skills">
+    <h2>Skills</h2>
+    <div class="skills-category">
+        <h3>Cybersecurity Skills</h3>
+        <ul>
+            <li>Penetration Testing</li>
+            <li>Vulnerability Assessment</li>
+            <li>Incident Response</li>
+            <li>Threat Hunting</li>
+            <li>SIEM Tools (Splunk, ELK Stack)</li>
+        </ul>
+    </div>
+    <div class="skills-category">
+        <h3>Linux & System Administration</h3>
+        <ul>
+            <li>Linux Security (SELinux, AppArmor)</li>
+            <li>Bash Scripting & Automation</li>
+            <li>System Hardening</li>
+            <li>User & Group Management</li>
+            <li>Monitoring & Logging (syslog, journald)</li>
+        </ul>
+    </div>
+    <div class="skills-category">
+        <h3>Cloud Security</h3>
+        <ul>
+            <li>IAM (AWS, GCP, Azure)</li>
+            <li>VPC Configurations</li>
+            <li>Cloud Monitoring & Auditing</li>
+            <li>Encryption in the Cloud (KMS)</li>
+        </ul>
+    </div>
+    <!-- Add more categories here as needed -->
+</section>
+
+
+
+
+
+            <!-- <div class="skills-item">
                 <h3>Linux</h3>
                 <p>Experience with Linux security, firewalls (iptables/nftables), Unbound DNS, etc.</p>
             </div>
@@ -119,7 +212,7 @@
                 <h3>Networking</h3>
                 <p>Hands-on experience with DNS configurations, firewalls, and VPNs.</p>
             </div>
-        </section>
+        </section> -->
 
         <!-- Projects Section -->
         <section class="section projects">
