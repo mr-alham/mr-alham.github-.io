@@ -4,9 +4,9 @@
         <div class="form-row">
             <div class="form-column">
                 <label for="name">• Name</label>
-                <input type="text" id="name" name="name" placeholder="Your Name">
+                <input type="text" id="name" name="name" placeholder="Your Name" autocomplete="on">
                 <label for="email">• Email</label>
-                <input type="email" id="email" name="email" placeholder="Your Email">
+                <input type="email" id="email" name="email" placeholder="Your Email" autocomplete="on">
             </div>
             <div class="form-column">
                 <label for="rating1">• Rate My Portfolio</label>
@@ -25,13 +25,13 @@
             </div>
         </div>
         <label for="message">• Message</label>
-        <textarea id="message" name="message" rows="3" placeholder="Your Message"></textarea>
+        <textarea id="message" name="message" rows="3" placeholder="Your Message" autocomplete="on"></textarea>
         <button type="submit" class="submit-button g-recaptcha" data-sitekey="6Lfzym4qAAAAALPQtWkUBFzy-EJnNITPHpwqkAAV"
             data-callback='onSubmit' data-action='submit'>Submit</button>
     </form>
 </div>
 <p>Built with love and some magic 🪄</p>
-<script src="https://www.google.com/recaptcha/api.js">
+<script src="https://www.google.com/recaptcha/api.js" defer>
 </script>
 <script>
     function onSubmit(token) {
