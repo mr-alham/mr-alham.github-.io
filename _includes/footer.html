@@ -1,0 +1,40 @@
+<div class="form-container">
+    <h3>Send Me a Message!</h3>
+    <form action="https://formspree.io/f/movqjprb" method="post" id="msg-form">
+        <div class="form-row">
+            <div class="form-column">
+                <label for="name">• Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name">
+                <label for="email">• Email</label>
+                <input type="email" id="email" name="email" placeholder="Your Email">
+            </div>
+            <div class="form-column">
+                <label for="rating1">• Rate My Portfolio</label>
+                <div class="rating">
+                    <input type="radio" name="rating" id="rating10" value="10"><label for="rating10">★</label>
+                    <input type="radio" name="rating" id="rating9" value="9"><label for="rating9">★</label>
+                    <input type="radio" name="rating" id="rating8" value="8"><label for="rating8">★</label>
+                    <input type="radio" name="rating" id="rating7" value="7"><label for="rating7">★</label>
+                    <input type="radio" name="rating" id="rating6" value="6"><label for="rating6">★</label>
+                    <input type="radio" name="rating" id="rating5" value="5"><label for="rating5">★</label>
+                    <input type="radio" name="rating" id="rating4" value="4"><label for="rating4">★</label>
+                    <input type="radio" name="rating" id="rating3" value="3"><label for="rating3">★</label>
+                    <input type="radio" name="rating" id="rating2" value="2"><label for="rating2">★</label>
+                    <input type="radio" name="rating" id="rating1" value="1"><label for="rating1">★</label>
+                </div>
+            </div>
+        </div>
+        <label for="message">• Message</label>
+        <textarea id="message" name="message" rows="3" placeholder="Your Message"></textarea>
+        <button type="submit" class="submit-button g-recaptcha" data-sitekey="6Lfzym4qAAAAALPQtWkUBFzy-EJnNITPHpwqkAAV"
+            data-callback='onSubmit' data-action='submit'>Submit</button>
+    </form>
+</div>
+<p>Built with love and some magic 🪄</p>
+<script src="https://www.google.com/recaptcha/api.js">
+</script>
+<script>
+    function onSubmit(token) {
+        document.getElementById("msg-form").submit();
+    }
+</script>

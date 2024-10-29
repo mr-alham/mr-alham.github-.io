@@ -1,0 +1,147 @@
+<div class="certificates">
+    <h2 id="certifications" class="projects-headings">Certificates & Badges</h2>
+    <div class="line"></div>
+    <div class="badges">
+        <h2 class="badge-title">Badges</h2>
+        <div class="badges-container">
+            <div class="badge-card">
+                <img loading="lazy" src="assets/img/badges/cybersecurity-essentials.png" alt="Cybersecurity Essentials"
+                    class="badge-image">
+                <h3>Cybersecurity Essentials</h3>
+                <p><strong>Availability, Confidentiality, Encryption, Integrity, Network Security</strong></p>
+            </div>
+            <div class="badge-card">
+                <img loading="lazy" src="assets/img/badges/network-support-and-security.png"
+                    alt="Network Support and Security" class="badge-image">
+                <h3>Network Support & Security</h3>
+                <p><strong>Documentation, Endpoint Devices, Help Desk, Network Troubleshooting, Support, User
+                        Support</strong></p>
+            </div>
+            <div class="badge-card">
+                <img loading="lazy" src="assets/img/badges/python-essentials.png" alt="Python Essentials"
+                    class="badge-image">
+                <h3>Python Essentials</h3>
+                <p><strong>Algorithmic Thinking, Analytical Thinking, Best Practices in
+                        Programming, Computer Programming, Design, Develop, and Debug Scripts, Entry-level, Procedural
+                        Programming</strong></p>
+            </div>
+            <div class="badge-card">
+                <img loading="lazy" src="assets/img/badges/networking-basics.png" alt="Networking Basics"
+                    class="badge-image">
+                <h3>Networking Basics</h3>
+                <p><strong>Application Layer Services, IPv4 Addresses, Network Media, NetWork Types, Protocols
+                        Standards,
+                        Wireless Access</strong></p>
+            </div>
+            <div class="badge-card">
+                <img loading="lazy" src="assets/img/badges/network-addressing-and-basic-troubleshooting.png"
+                    alt="Network Addressing and Basic Troubleshooting" class="badge-image">
+                <h3>Network Addressing and Basic Troubleshooting</h3>
+                <p><strong>Cisco Routers, Cisco Switches, Copper and Fiber Cabling, IPv6 Addressing, Network
+                        Troubleshooting, Troubleshooting</strong></p>
+            </div>
+            <div class="badge-card">
+                <img loading="lazy" src="assets/img/badges/introduction-to-cybersecurity.png"
+                    alt="Introduction to Cybersecurity" class="badge-image">
+                <h3>Introduction to Cybersecurity</h3>
+                <p><strong>Cyber Best Practices, Cybersecurity, Network Vulnerabilities, Privacy And Data
+                        Confidentiality,
+                        Threat Detection</strong></p>
+            </div>
+            <div class="badge-card">
+                <img loading="lazy" src="assets/img/badges/javascript-essentials.png" alt="JavaScript Essentials"
+                    class="badge-image">
+                <h3>JavaScript Essentials</h3>
+                <p><strong>Conditional Execution, Control Flow, Data Types, Debugging, Errors, Exceptions,
+                        Functions, Recursion, Type Casting, User Interaction, Variables</strong></p>
+            </div>
+            <div class="badge-card">
+                <img loading="lazy" src="assets/img/badges/introduction-to-packet-tracer.png"
+                    alt=" Introduction to Packet Tracer" class="badge-image">
+                <h3>Introduction to Packet Tracer</h3>
+                <p><strong>Cisco Packet Tracer, IoT Simulation, Network Simulation</strong></p>
+            </div>
+            <div class="badge-card">
+                <img loading="lazy" src="assets/img/badges/computer-hardware-basics.png" alt="Computer Hardware Basics"
+                    class="badge-image">
+                <h3>Computer Hardware Basics</h3>
+                <p><strong>Device Maintenance, Laptops, Mobile Devices, Personal Computers</strong></p>
+            </div>
+            <div class="badge-card">
+                <img loading="lazy" src="assets/img/badges/networking-academy-learn-a-thon-2023.png"
+                    alt="Networking Academy Learn-A-Thon 2023" class="badge-image">
+                <h3>Networking Academy Learn-A-Thon 2023</h3>
+                <p><strong>Self Motivated</strong></p>
+            </div>
+        </div>
+    </div>
+    <div class="certificates-list">
+        <h2 class="certificate-title">Certificates</h2>
+        <ul>
+            <li>
+                <a href="certificate-url" class="certificate-name" data-img="assets/img/introduction-to-cybersecurity-cert.png">
+                    Introduction to Cybersecurity - Cisco Networking Academy
+                </a>
+            </li>
+            <li>
+                <a href="certificate-url" class="certificate-name" data-img="assets/img/linux-essentials-cert.png">
+                    Linux Essentials - Udemy
+                </a>
+            </li>
+            <li>
+                <a href="certificate-url" class="certificate-name" data-img="assets/img/network-addressing-basic-troubleshooting-cert.png">
+                    Network Addressing & Basic Troubleshooting -Cisco Networking Academy
+                </a>
+            </li>
+            <li>
+                <a href="certificate-url" class="certificate-name" data-img="assets/img/programming-foundations-cert.png">
+                    Programming Foundations:Fundamentals - Linkedin Learning
+                </a>
+            </li>
+            <li>
+                <a href="certificate-url" class="certificate-name" data-img="assets/img/use-bash-scripting-on-linux-cert.png">
+                    Use Bash Scripting on Linux to Execute Common Commands - Coursera
+                </a>
+            </li>
+            <li>
+                <a href="certificate-url" class="certificate-name" data-img="assets/img/python-programming-cert.png">
+                    Python Programming - University of Moratuwa, Sri Lanka
+                </a>
+            </li>
+        </ul>
+
+        <div class="certificate-card" id="certificate-card">
+            <img id="certificate-img" alt="Certificate Image" class="badge-image">
+        </div>
+    </div>
+</div>
+<script>
+    document.querySelectorAll('.certificate-name').forEach(item => {
+        item.addEventListener('mousemove', event => {
+            const imgSrc = event.target.getAttribute('data-img');
+            const imgElement = document.getElementById('certificate-img');
+            const certificateCard = document.getElementById('certificate-card');
+            imgElement.src = imgSrc;
+            certificateCard.style.display = 'block';
+            const offsetX = 10;
+            const offsetY = 30;
+            certificateCard.style.left = event.pageX + offsetX + 'px';
+            certificateCard.style.top = event.pageY + offsetY + 'px';
+        });
+        item.addEventListener('mouseout', () => {
+            document.getElementById('certificate-card').style.display = 'none';
+        });
+        item.addEventListener('click', event => {
+            event.preventDefault();
+            const imgSrc = event.target.getAttribute('data-img');
+            const imgElement = document.getElementById('certificate-img');
+            const certificateCard = document.getElementById('certificate-card');
+            imgElement.src = imgSrc;
+            certificateCard.style.display = 'block';
+            const offsetX = 20;
+            const offsetY = 20;
+            certificateCard.style.left = event.pageX + offsetX + 'px';
+            certificateCard.style.top = event.pageY + offsetY + 'px';
+        });
+    });
+</script>

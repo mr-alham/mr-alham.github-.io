@@ -1,0 +1,27 @@
+<h1>Alham Azhar</h1>
+<p>Cybersecurity Engineer | Linux Enthusiast | Cloud & Network Aficionado</p>
+<p>"Just another /bin/bash human trying to secure the world, one packet at a time."</p>
+<p>
+    <a target="_blank" rel="noopener" href="mailto:alham@duck.com"> Email</a> |
+    <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/alham-azhar/"> LinkedIn</a> |
+    <a target="_blank" rel="noopener" href="https://github.com/mr-alham"> GitHub</a> |
+    <a target="_blank" rel="noopener" href="https://www.x.com/alham__aa"> Twitter(X)</a> |
+    <a target="_blank" rel="noopener"
+        href="https://drive.google.com/file/d/1chKFXj58L5o1bYB8UrlkEI5YVwEO8Ni1/view">Resume</a>
+</p>
+<div class="mouse" id="mouseElement"></div>
+<script>
+    for (let i = 0; i <= 60; i++) {
+        setTimeout(() => {
+            document.getElementById("mouseElement").style.opacity = i / 100;
+            document.getElementById("navbarToggle").style.opacity = i / 1000;
+        }, i * 200);
+    }
+    window.addEventListener("scroll", function () {
+        const mouseElement = document.querySelector(".mouse");
+        if (window.scrollY > 10) {
+            mouseElement.style.display = "none";
+            document.getElementById("navbarToggle").style.opacity =100
+        }
+    });
+</script>

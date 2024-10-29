@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% include head.html %}
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            {% include header.html %}
+        </header>
+        <div class="navbar" id="navbar">
+            <button id="back-to-top" class="back-to-top" onclick="scrollToTop()">&#8613</button>
+            <button class="navbar-toggle" id="navbarToggle">☰</button>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#certifications">Certifications</a>
+        </div>
+        
+        <script>
+            window.addEventListener("scroll", function () {
+                const navbar = document.getElementById("navbar");
+                if (window.scrollY > document.querySelector(".header").offsetHeight) {
+                    navbar.classList.add("minimized");
+                } else {
+                    navbar.classList.remove("minimized", "expanded");
+                }
+            });
+            document.getElementById("navbarToggle").addEventListener("click", function () {
+                const navbar = document.getElementById("navbar");
+                navbar.classList.toggle("expanded");
+            });
+        </script>
+        <script>
+            window.onscroll = function () { toggleBackToTopButton() };
+
+            function toggleBackToTopButton() {
+                const backToTopButton = document.getElementById("back-to-top");
+                if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                    backToTopButton.style.display = "block";
+                } else {
+                    backToTopButton.style.display = "none";
+                }
+            }
+
+            function scrollToTop() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+
+
+        </script>
+        {% include body.html %}
+        <footer>
+            {% include footer.html %}
+        </footer>
+    </div>
+</body>
+
+</html>
